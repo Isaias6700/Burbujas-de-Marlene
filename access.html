@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Punto de Control</title>
+  <link rel="stylesheet" href="style-access.css">
+</head>
+<body>
+  <h1>✨ Punto de control ✨</h1>
+  <h2>Ingrese su código de acceso</h2>
+
+  <form id="accessForm">
+    <div class="code-input">
+      <input type="tel" maxlength="1" id="part1" required>
+      <input type="tel" maxlength="1" id="part2" required>
+      <span>-</span>
+      <input type="tel" maxlength="1" id="part3" required>
+      <input type="tel" maxlength="1" id="part4" required>
+      <span>-</span>
+      <input type="tel" maxlength="1" id="part5" required>
+      <input type="tel" maxlength="1" id="part6" required>
+      <input type="tel" maxlength="1" id="part7" required>
+      <input type="tel" maxlength="1" id="part8" required>
+    </div>
+
+    <!-- Campo oculto con el código final -->
+    <input type="hidden" id="fullCode" name="fullCode">
+
+    <button type="submit">Acceder 💖</button>
+  </form>
+
+  <script src="validation.js"></script>
+</body>
+</html>

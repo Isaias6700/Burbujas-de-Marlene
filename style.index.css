@@ -14,6 +14,26 @@ body{
     position: relative;
 }
 
+a.button-style {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #ffffff; /* Fondo blanco como las nubes */
+  color: #2d6a4f; /* Verde que combine con el diseño */
+  font-weight: bold;
+  font-size: 16px;
+  text-decoration: none;
+  border-radius: 30px; /* Bordes redondeados */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+a.button-style:hover {
+  background: #95d5b2; /* Verde suave al pasar el mouse */
+  color: #ffffff; /* Texto blanco */
+  transform: scale(1.05);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+
 @keyframes gradientAnimation {
     0% { background-position: 0% 50%}
     50% { background-position: 100% 50%}

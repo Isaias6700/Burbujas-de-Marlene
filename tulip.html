@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Princesa de la Calma - Zelda</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to bottom, #2e4b6e, #5b9b7d); /* Degradado azul-verde */
+            overflow: hidden;
+        }
+
+        .silent-princess {
+            position: relative;
+            width: 60vw;
+            max-width: 200px;
+            aspect-ratio: 1/1;
+        }
+
+        /* Pétalos */
+        .petal {
+            position: absolute;
+            width: 25vw;
+            height: 25vw;
+            max-width: 80px;
+            max-height: 80px;
+            border-radius: 50%;
+            transform-origin: bottom center;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+
+        .petal:nth-child(1) {
+            background: linear-gradient(45deg, #ff69b4, #ffb6c1); /* Rosa */
+            transform: rotate(0deg);
+            top: -10%;
+            left: 25%;
+        }
+
+        .petal:nth-child(2) {
+            background: linear-gradient(45deg, #ffff00, #ffd700); /* Amarillo */
+            transform: rotate(72deg);
+            top: 10%;
+            right: 25%;
+        }
+
+        .petal:nth-child(3) {
+            background: linear-gradient(45deg, #98fb98, #90ee90); /* Verde claro */
+            transform: rotate(144deg);
+            bottom: 0%;
+            left: 25%;
+        }
+
+        .petal:nth-child(4) {
+            background: linear-gradient(45deg, #ff69b4, #ffb6c1); /* Rosa */
+            transform: rotate(216deg);
+            top: 10%;
+            left: 25%;
+        }
+
+        .petal:nth-child(5) {
+            background: linear-gradient(45deg, #ffff00, #ffd700); /* Amarillo */
+            transform: rotate(288deg);
+            bottom: 0%;
+            right: 25%;
+        }
+
+        /* Centro de la flor */
+        .center {
+            position: absolute;
+            width: 15vw;
+            height: 15vw;
+            max-width: 50px;
+            max-height: 50px;
+            background: radial-gradient(circle, #ffa500 30%, #ff4500 70%); /* Naranja brillante */
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 0 15px rgba(255, 165, 0, 0.8);
+            z-index: 10;
+        }
+
+        /* Tallo */
+        .stem {
+            position: absolute;
+            width: 3vw;
+            height: 20vw;
+            max-width: 10px;
+            max-height: 80px;
+            background: linear-gradient(to bottom, #32cd32, #228b22); /* Verde */
+            bottom: -20vw;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 5px;
+        }
+
+        /* Hojas */
+        .leaf {
+            position: absolute;
+            width: 15vw;
+            height: 8vw;
+            max-width: 50px;
+            max-height: 30px;
+            background: linear-gradient(to right, #98fb98, #3cb371); /* Verde claro */
+            border-radius: 50% 10%;
+            bottom: -10vw;
+        }
+
+        .leaf:nth-child(1) {
+            left: 30%;
+            transform: rotate(-30deg);
+        }
+
+        .leaf:nth-child(2) {
+            right: 30%;
+            transform: rotate(30deg);
+        }
+
+        /* Animación de resplandor */
+        @keyframes glow {
+            0% { box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); }
+            50% { box-shadow: 0 0 20px rgba(255, 165, 0, 0.8); }
+            100% { box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); }
+        }
+
+        .petal, .center {
+            animation: glow 2s ease-in-out infinite;
+        }
+
+        @media (max-width: 360px) {
+            .silent-princess {
+                width: 50vw;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="silent-princess">
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="center"></div>
+        <div class="stem"></div>
+        <div class="leaf"></div>
+        <div class="leaf"></div>
+    </div>
+</body>
+</html>
