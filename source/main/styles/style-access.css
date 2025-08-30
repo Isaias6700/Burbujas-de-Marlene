@@ -23,6 +23,7 @@ h2 {
   align-items: center;
   gap: 8px;
   margin-bottom: 20px;
+  flex-wrap: wrap; /* permite que los inputs bajen en móvil */
 }
 
 .code-input input {
@@ -49,7 +50,7 @@ h2 {
   color: #2d6a4f;
 }
 
-button {
+button.access {
   padding: 12px 28px;
   background: #ffffff;
   color: #2d6a4f;
@@ -62,8 +63,52 @@ button {
   transition: all 0.3s ease;
 }
 
-button:hover {
+button.access:hover {
   background: #95d5b2;
   color: #ffffff;
   transform: scale(1.05);
+}
+
+/* 📱 Ajustes para móviles */
+@media (max-width: 600px) {
+  body {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+
+  .code-input {
+    gap: 6px;
+  }
+
+  .code-input input {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+
+  button.access {
+    width: 100%;  /* Botón ocupa todo el ancho en móvil */
+    padding: 14px;
+    font-size: 18px;
+  }
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #b7e4c7; /* Verde suave */        
+    margin: 0;
+    font-family: 'Arial';
+    text-align: center;
+    overflow: hidden;
+    position: relative;
 }

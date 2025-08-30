@@ -20,9 +20,7 @@ document.getElementById("accessForm").addEventListener("submit", function(e) {
 
   // Ejemplo de validación
   if (finalCode === "29112024") {
-    alert("✅ Código correcto, bienvenida Marlene!");
-    window.location.href = "tulip.html";
-    // aquí puedes redirigir: window.location.href = "index.html";
+    window.location.href = "flowers.html";
   } else {
     alert("❌ Código incorrecto, intenta otra vez");
   }
@@ -36,3 +34,8 @@ document.querySelectorAll(".code-input input").forEach((input, index, inputs) =>
     }
   });
 });
+
+// Funcionalidad del botón de la bombilla para mostrar pista
+function btnTip(){
+  alert("💡 Pista: Es una fecha muy especial, marca un antes y un despues en nuestras vidas");
+}

@@ -77,9 +77,11 @@ const message = [
     }, { once: true }); // Solo necesita desbloquearse una vez
   
     // Reproducir sonido en cada toque
-    document.body.addEventListener("click", () => {
-      sound.currentTime = 0;
-      sound.play();
-    });
+    // document.body.addEventListener("click", () => {
+    //   sound.currentTime = 0;
+    //   sound.play();
+    // });
   });
+
+  
   
